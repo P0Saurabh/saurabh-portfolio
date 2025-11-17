@@ -23,7 +23,7 @@ export const Hero: React.FC = () => (
             SAURABH <span className="text-[#ea5c2a]">SATISH</span> PAWAR
           </h1>
           <p className="hero-subtitle mt-4 text-xl md:text-2xl font-semibold text-[#fcfaff]/80">
-            Building intelligent, automated systems for the cloud.
+            Building cloud-native apps, automation systems & DevOps solutions.
           </p>
           <p className="mt-4 text-sm md:text-base text-[#fcfaff]/75 max-w-xl">
             Software &amp; DevOps Engineer focused on scalable full-stack apps,
