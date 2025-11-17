@@ -1,0 +1,21 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    // ... other options
+    "target": "es2020", // or newer
+    "module": "esnext", // or es2020
+    "moduleResolution": "bundler", // or node
+    
+    // Crucial: Use the modern JSX transform
+    "jsx": "react-jsx", 
+    // This tells TypeScript where to get the JSX types from (often not needed, but good to check)
+    // "jsxImportSource": "react", 
+    
+    // This may or may not be set, but ensures the compiler knows about React types:
+    "lib": ["DOM", "DOM.Iterable", "ES2020"]
+}
+}
