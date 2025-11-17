@@ -102,28 +102,31 @@ const App: React.FC = () => {
         });
 
       gsap.utils
-        .toArray<HTMLElement>(".project-card")
-        .forEach((card: HTMLElement) => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "top 85%",
-            },
-          });
-          tl.from(card, {
-            opacity: 0,
-            scale: 0.92,
-            y: 24,
-            duration: 0.5,
-            ease: "power3.out",
-          }).to(card, {
-            y: -4,
-            duration: 2,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-          });
-        });
+  .toArray<HTMLElement>(".project-card")
+  .forEach((card: HTMLElement) => {
+    // Entrance animation (no opacity change)
+    gsap.from(card, {
+      y: 24,
+      scale: 0.96,
+      duration: 0.6,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // Subtle idle float effect
+    gsap.to(card, {
+      y: -4,
+      duration: 2.2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  });
+
     });
 
     return () => ctx.revert();
