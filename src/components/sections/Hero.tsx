@@ -83,7 +83,7 @@ export const Hero: React.FC = () => (
               </div>
             </div>
             <span className="px-3 py-1 rounded-full bg-[#ea5c2a]/15 text-[10px] tracking-[0.18em] uppercase text-[#ea5c2a] border border-[#ea5c2a]/60">
-              Open to internships
+              Open to Job Opportunities
             </span>
           </div>
 
