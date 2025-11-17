@@ -45,7 +45,7 @@ export const ExperienceSection: React.FC = () => (
                 
               >
               Microsoft Azure Fundamentals (AZ-900)
-              </>
+              </a>
             </p>
           </div>
           <div className="bg-[#101010] border border-[#2a2a2a] rounded-2xl p-4 text-xs">
