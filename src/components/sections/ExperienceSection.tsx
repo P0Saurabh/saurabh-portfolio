@@ -19,7 +19,7 @@ export const ExperienceSection: React.FC = () => (
             ]}
           />
           <TimelineItem
-            role="Vice Organiser – Dev Group on Campus"
+            role="Vice Organiser – GDG Groups on Campus"
             time="Sept 2024 – Sept 2025"
             bullets={[
               "Organised hackathons & Docker / K8s sessions.",
@@ -38,7 +38,14 @@ export const ExperienceSection: React.FC = () => (
               Certifications
             </h3>
             <p className="text-[#fcfaff]/80">
+              <a
+                href="https://learn.microsoft.com/en-gb/users/saurabhpawar-0489/transcript"
+                target="_blank"
+                rel="noopener noreferrer"
+                
+              >
               Microsoft Azure Fundamentals (AZ-900)
+              </>
             </p>
           </div>
           <div className="bg-[#101010] border border-[#2a2a2a] rounded-2xl p-4 text-xs">
