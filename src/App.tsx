@@ -15,7 +15,7 @@ import { ProjectsSection } from "./components/sections/ProjectsSection";
 import { ExperienceSection } from "./components/sections/ExperienceSection";
 import { ContactSection } from "./components/sections/ContactSection";
 import { ProjectOverlay } from "./components/shared/ProjectOverlay";
-import type { PROJECTS, Project } from "./data/projects";
+import type { Project } from "./data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
