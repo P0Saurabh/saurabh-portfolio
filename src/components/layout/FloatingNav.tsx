@@ -42,23 +42,53 @@ export const FloatingNav: React.FC = () => {
   };
 
   return (
-    <div
-      className={`fixed top-4 left-1/2 z-40 -translate-x-1/2 transition-all duration-400 ${
-        hidden ? "-translate-y-16 opacity-0" : "translate-y-0 opacity-100"
-      }`}
-    >
-      <nav className="flex items-center gap-2 rounded-full bg-[#101010]/85 border border-[#2a2a2a] px-3 py-2 shadow-xl shadow-black/50 backdrop-blur-md">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.targetId}
-            onClick={handleClick(item.targetId)}
-            className="flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium text-[#fcfaff]/70 hover:text-[#fcfaff] hover:bg-[#2a2a2a] transition"
-          >
-            <span className="text-[#ea5c2a]">{item.icon}</span>
-            <span>{item.name}</span>
-          </button>
-        ))}
-      </nav>
-    </div>
+    <>
+      {/* 🖥️ Desktop / Tablet – top-center floating pill */}
+      <div
+        className={`fixed z-40 left-1/2 top-4 -translate-x-1/2 transition-all duration-300 
+        hidden sm:block
+        ${hidden ? "-translate-y-10 opacity-0" : "translate-y-0 opacity-100"}`}
+      >
+        <nav className="flex items-center gap-2 rounded-full bg-[#101010]/85 border border-[#2a2a2a] px-3 py-2 shadow-xl shadow-black/50 backdrop-blur-md max-w-[90vw]">
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.targetId}
+              onClick={handleClick(item.targetId)}
+              className="flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium 
+                         text-[#fcfaff]/70 hover:text-[#fcfaff] hover:bg-[#2a2a2a] transition"
+            >
+              <span className="text-[#ea5c2a]">{item.icon}</span>
+              <span>{item.name}</span>
+            </button>
+          ))}
+        </nav>
+      </div>
+
+      {/* 📱 Mobile – bottom sticky nav */}
+      <div
+        className={`fixed z-40 inset-x-0 bottom-3 px-3 sm:hidden transition-all duration-300
+        ${hidden ? "translate-y-16 opacity-0" : "translate-y-0 opacity-100"}`}
+      >
+        <nav className="mx-auto max-w-md rounded-3xl bg-[#101010]/95 border border-[#2a2a2a] shadow-2xl shadow-black/70 backdrop-blur-md">
+          <ul className="flex items-center justify-between px-2 py-1.5">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.targetId}>
+                <button
+                  onClick={handleClick(item.targetId)}
+                  className="flex flex-col items-center justify-center px-2 py-1 text-[10px] text-[#fcfaff]/70 hover:text-[#fcfaff]"
+                >
+                  <span className="mb-[2px] flex items-center justify-center rounded-full p-1.5 bg-[#1e1e1e] border border-[#2a2a2a]">
+                    {React.cloneElement(item.icon as React.ReactElement<any>, {
+                      className: "w-4 h-4 text-[#ea5c2a]",
+                    })}
+                  </span>
+                  <span className="leading-none mt-[1px]">{item.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 };

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saurabh-porfolio-six.vercel.app/sitemap.xml

@@ -45,32 +45,33 @@ export const NowPlayingStrip: React.FC<Props> = ({ statuses = DEFAULT_STATUSES }
   }, [statuses.length]);
 
   return (
-    <div className="fixed bottom-4 left-4 z-40">
-      <div className="flex items-center gap-3 rounded-full bg-[#101010]/85 border border-[#2a2a2a] px-4 py-2 shadow-lg shadow-black/60 backdrop-blur-md">
-        <div className="flex items-end gap-[3px]">
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className="w-[3px] h-3 rounded-full bg-[#ea5c2a]"
-              style={{
-                animation: `equalizer-bar 0.9s ease-in-out ${i * 0.15}s infinite`,
-                transformOrigin: "bottom center",
-              }}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col">
-          <span className="text-[10px] uppercase tracking-[0.16em] text-[#fcfaff]/60">
-            Now Playing
-          </span>
-          <div
-            ref={textRef}
-            className="text-xs text-[#fcfaff]/85 whitespace-nowrap"
-          >
-            {statuses[index]}
-          </div>
-        </div>
-      </div>
-    </div>
+    // <div className="fixed bottom-4 left-4 z-40">
+    //   <div className="flex items-center gap-3 rounded-full bg-[#101010]/85 border border-[#2a2a2a] px-4 py-2 shadow-lg shadow-black/60 backdrop-blur-md">
+    //     <div className="flex items-end gap-[3px]">
+    //       {[0, 1, 2].map((i) => (
+    //         <span
+    //           key={i}
+    //           className="w-[3px] h-3 rounded-full bg-[#ea5c2a]"
+    //           style={{
+    //             animation: `equalizer-bar 0.9s ease-in-out ${i * 0.15}s infinite`,
+    //             transformOrigin: "bottom center",
+    //           }}
+    //         />
+    //       ))}
+    //     </div>
+    //     <div className="flex flex-col">
+    //       <span className="text-[10px] uppercase tracking-[0.16em] text-[#fcfaff]/60">
+    //         Now Playing
+    //       </span>
+    //       <div
+    //         ref={textRef}
+    //         className="text-xs text-[#fcfaff]/85 whitespace-nowrap"
+    //       >
+    //         {statuses[index]}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div></div>
   );
 };
