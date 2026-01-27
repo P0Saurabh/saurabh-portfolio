@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 import { AnimatedBackground } from "@/components/layout/AnimatedBackground";
 import { FloatingNav } from "@/components/layout/FloatingNav";
@@ -149,7 +150,7 @@ const Home: React.FC = () => {
 
       <Hero />
 
-      <main className="max-w-6xl mx-auto px-4 pb-20">
+      <main className="max-w-6xl mx-auto px-4 pb-8">
         <AboutSection />
         <SkillsSection />
         <ProjectsSection onProjectClick={handleProjectClick} />
@@ -163,8 +164,18 @@ const Home: React.FC = () => {
         onClose={() => setProjectOverlayOpen(false)}
       />
 
-      <footer className="py-5 text-center text-xs text-[#fcfaff]/60 bg-[#101010] border-t border-[#2a2a2a]">
-        &copy; {new Date().getFullYear()} Saurabh Satish Pawar · React · GSAP · DevOps &amp; AI.
+      <footer className="py-12 text-center text-xs text-[#fcfaff]/40 bg-[#101010] border-t border-[#2a2a2a] flex flex-col items-center gap-4 relative z-10">
+        <Image
+          src="/logo.png"
+          alt="Saurabh Satish Pawar Logo"
+          width={40}
+          height={40}
+          className="rounded-full grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 pointer-events-none"
+        />
+        <p className="max-w-xs mx-auto leading-relaxed">
+          &copy; {new Date().getFullYear()} Saurabh Satish Pawar<br />
+          <span className="text-[10px] opacity-60">Crafted with Next.js · GSAP · DevOps Precision</span>
+        </p>
       </footer>
     </div>
   );
