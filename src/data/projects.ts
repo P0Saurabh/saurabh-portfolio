@@ -13,17 +13,20 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     id: "jsvoice",
-    title: "JSVoice Library – Web Speech API Integration",
+    title: "JSVoice Library – Voice-Based UI Automation",
     shortDescription:
       "Modular JS library that wraps Web Speech API to enable voice-driven UI automation with simple commands.",
     tech: "JavaScript • Web Speech API • Frontend Automation • AI Voice",
     details: [
-      "Reusable JSVoice library that abstracts speech recognition & synthesis into simple functions.",
-      "Maps voice commands to DOM actions (click, scroll, navigation, forms).",
-      "Drop-in architecture – can be mounted on existing frontends.",
+      "Developed a modular and reusable JavaScript library abstracting the Web Speech API (speech recognition and synthesis).",
+      "Enabled voice-driven UI commands, navigation, and accessibility features for modern web applications.",
+      "Designed for easy integration and extensibility across multiple frontend frameworks.",
       "Future scope: LLM-based semantic command matching for natural language UX.",
     ],
-    links: [{ label: "GitHub Repo", href: "https://github.com/VoiceUI-js/JSVoice" }],
+    links: [
+      { label: "Live Demo", href: "https://js-voice-website-pi.vercel.app/" },
+      { label: "GitHub", href: "https://github.com/VoiceUI-js/JSVoice" }
+    ],
   },
   {
     id: "proctor",
@@ -32,10 +35,9 @@ export const PROJECTS: Project[] = [
       "Browser-based proctoring with face tracking, gaze detection, voice alerts and violation logging.",
     tech: "React • Computer Vision • WebRTC • Node.js • AI Automation",
     details: [
-      "Real-time face tracking & gaze monitoring to detect off-screen behaviour.",
-      "Voice activity & multi-face/device detection for suspicious activity.",
-      "Automatic violation logging with timestamps & reasons.",
-      "Lightweight, browser-first UI – no heavy agent installs.",
+      "Built a browser-based proctoring platform with real-time face tracking, gaze monitoring, and voice detection.",
+      "Implemented multi-face and device detection with automated violation logging and real-time alerts.",
+      "Designed a lightweight and scalable architecture suitable for large-scale online examinations.",
     ],
     links: [{ label: "Live Demo", href: "https://proctor-g1yd.onrender.com/" }],
   },

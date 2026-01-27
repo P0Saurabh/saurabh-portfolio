@@ -19,25 +19,25 @@ export const SkillsSection: React.FC = () => (
       />
       <SkillGroup title="Databases" items={["MongoDB", "MySQL", "Firebase"]} />
       <SkillGroup
-        title="DevOps & Cloud"
+        title="Cloud & DevOps"
         items={[
           "AWS (EC2, S3, Lambda, CloudWatch)",
           "Azure (AZ-900)",
           "Docker",
           "Kubernetes",
           "GitHub Actions",
-          "Terraform (basic)",
+          "Terraform (Basic)",
           "CI/CD Pipelines",
         ]}
       />
       <SkillGroup title="Version Control" items={["Git", "GitHub", "GitLab"]} />
       <SkillGroup
-        title="AI & Automation"
+        title="Core Concepts"
         items={[
-          "AI Integrations in Workflows",
-          "AI-based Proctoring & Monitoring",
-          "Voice-based UI Automation (JSVoice)",
-          "Automation of Cloud & DevOps Tasks",
+          "RESTful APIs",
+          "Microservices",
+          "System Design",
+          "Linux Administration",
         ]}
       />
     </div>

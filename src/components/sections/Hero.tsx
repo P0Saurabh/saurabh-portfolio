@@ -23,12 +23,11 @@ export const Hero: React.FC = () => (
             SAURABH <span className="text-[#ea5c2a]">SATISH</span> PAWAR
           </h1>
           <p className="hero-subtitle mt-4 text-xl md:text-2xl font-semibold text-[#fcfaff]/80">
-            Building cloud-native apps, automation systems & DevOps solutions.
+            Building scalable apps &amp; automating cloud infrastructure.
           </p>
           <p className="mt-4 text-sm md:text-base text-[#fcfaff]/75 max-w-xl">
-            Software &amp; DevOps Engineer focused on scalable full-stack apps,
-            CI/CD pipelines, and AI-powered automation across cloud-native
-            infrastructure (Docker, Kubernetes, AWS).
+            Motivated Software and DevOps Engineer with strong foundations in Python, JavaScript, and Cloud Computing.
+            Passionate about combining software engineering with DevOps automation to deliver secure, reliable, and high-performance systems.
           </p>
 
           <div className="hero-tags mt-5 flex flex-wrap gap-2 text-xs">
@@ -108,12 +107,12 @@ export const Hero: React.FC = () => (
                   LINKEDIN
                 </p>
                 <a
-                  href="https://linkedin.com/saurabh-pawar04"
+                  href="https://linkedin.com/in/saurabh-pawar04"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#fcfaff] mt-1 block hover:underline text-xs"
                 >
-                  /saurabh-pawar04
+                  /in/saurabh-pawar04
                 </a>
               </div>
               <div>
@@ -138,7 +137,7 @@ export const Hero: React.FC = () => (
                 B.Tech – Computer Science &amp; Engineering
               </p>
               <p className="text-[#fcfaff]/70 text-xs">
-                Mahatma Gandhi Mission&apos;s College of Engineering · CGPA 8.4/10
+                MGM’s College of Engineering · CGPA 6.8/10
               </p>
             </div>
           </div>
