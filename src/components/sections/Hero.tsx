@@ -1,132 +1,136 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
-    IconMail,
-    IconBrandLinkedin,
     IconBrandGithub,
-    IconTerminal2,
-    IconArrowRight
+    IconBrandLinkedin,
+    IconMail,
+    IconChevronDown,
+    IconTerminal2
 } from "@tabler/icons-react";
 
-export const Hero: React.FC = () => (
-    <section
-        id="hero"
-        className="relative overflow-hidden min-h-screen flex items-center justify-center pt-20 pb-32 md:py-0 md:pb-20"
-    >
-        {/* Background Gradients */}
-        <div className="hero-blobs pointer-events-none absolute inset-0">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#ea5c2a]/10 rounded-full blur-[120px] -z-10 opacity-50 mix-blend-screen" />
-            <div className="absolute right-[-10%] top-[20%] w-[600px] h-[600px] bg-[#ea5c2a]/5 rounded-full blur-[100px] -z-10" />
-        </div>
+export const Hero: React.FC = () => {
+    const containerRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"],
+    });
 
-        <div className="w-full max-w-[1400px] mx-auto px-6 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-                {/* Left Content Side */}
-                <div className="flex-1 flex flex-col items-start text-left w-full">
-
-                    {/* Status Badge */}
-                    <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full bg-[#ffffff]/5 border border-[#ffffff]/10 backdrop-blur-md mb-8 hover:border-[#ea5c2a]/30 transition-colors cursor-default">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ea5c2a] opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ea5c2a]"></span>
-                        </span>
-                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#fcfaff]/60 font-medium">
-                            System Status: Online
-                        </span>
-                    </div>
-
-                    <h1 className="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-[#fcfaff] leading-[0.9] mb-8">
-                        SAURABH <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ea5c2a] via-[#ff8f6b] to-[#ea5c2a] bg-[length:200%_auto] animate-gradient">
-                            S. PAWAR
-                        </span>
-                    </h1>
-
-                    <div className="space-y-8 max-w-2xl">
-                        <p className="hero-subtitle text-xl md:text-2xl font-light text-[#fcfaff]/80 leading-relaxed">
-                            <strong className="text-[#fcfaff] font-bold">Architecting AI-Driven Digital Ecosystems.</strong><br />
-                            Bridging the gap between Enterprise-Grade Engineering and Strategic Growth.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-4 mt-10">
-                        <a
-                            href="#projects"
-                            className="group px-8 py-4 rounded-full bg-[#fcfaff] text-[#101010] font-black hover:bg-[#eaeaea] transition-all flex items-center gap-2 uppercase text-[11px] tracking-[0.2em]"
-                        >
-                            <IconTerminal2 className="w-4 h-4" />
-                            View Work
-                        </a>
-                        <a
-                            href="https://github.com/P0Saurabh"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group px-8 py-4 rounded-full border border-[#ffffff]/20 bg-[#ffffff]/5 text-[#fcfaff] font-black hover:bg-[#ffffff]/10 hover:border-[#ea5c2a]/50 transition-all flex items-center gap-2 uppercase text-[11px] tracking-[0.2em]"
-                        >
-                            Github
-                            <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
-                    </div>
-                </div>
-
-                {/* Right - Profile Specs Card */}
-                <div className="w-full max-w-[420px] lg:w-auto shrink-0 relative lg:mt-12">
-                    <div className="absolute inset-0 bg-[#ea5c2a] blur-[60px] opacity-20" />
-
-                    <div className="bg-[#121212]/80 backdrop-blur-2xl border border-[#ffffff]/10 rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl">
-                        {/* Card Header with Avatar */}
-                        <div className="flex items-center gap-6 mb-8">
-                            <div className="w-20 h-20 rounded-2xl bg-[#1e1e1e] border border-[#333] overflow-hidden relative">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Saurabh Logo"
-                                    fill
-                                    className="object-cover p-2"
-                                />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-[#fcfaff] tracking-tight">Saurabh Pawar</h3>
-                                <p className="text-xs text-[#ea5c2a] font-mono uppercase mt-1 tracking-widest">DevOps Engineer</p>
-                            </div>
-                        </div>
-
-                        {/* Specs Grid */}
-                        <div className="grid grid-cols-2 gap-3 mb-8">
-                            <div className="bg-[#1a1a1a] p-4 rounded-2xl border border-[#2a2a2a]">
-                                <div className="text-[10px] text-[#fcfaff]/40 uppercase font-bold tracking-wider mb-1">Focus</div>
-                                <div className="text-sm font-bold text-[#fcfaff]">Cloud Native</div>
-                            </div>
-                            <div className="bg-[#1a1a1a] p-4 rounded-2xl border border-[#2a2a2a]">
-                                <div className="text-[10px] text-[#fcfaff]/40 uppercase font-bold tracking-wider mb-1">Stack</div>
-                                <div className="text-sm font-bold text-[#fcfaff]">Full-Stack</div>
-                            </div>
-                            <div className="bg-[#1a1a1a] p-4 rounded-2xl border border-[#2a2a2a]">
-                                <div className="text-[10px] text-[#fcfaff]/40 uppercase font-bold tracking-wider mb-1">Location</div>
-                                <div className="text-sm font-bold text-[#fcfaff]">India</div>
-                            </div>
-                            <div className="bg-[#1a1a1a] p-4 rounded-2xl border border-[#2a2a2a]">
-                                <div className="text-[10px] text-[#fcfaff]/40 uppercase font-bold tracking-wider mb-1">Exp</div>
-                                <div className="text-sm font-bold text-[#fcfaff]">4+ Years</div>
-                            </div>
-                        </div>
-
-                        {/* Social Row */}
-                        <div className="flex items-center gap-3 pt-6 border-t border-[#ffffff]/10">
-                            <a href="https://github.com/P0Saurabh" className="flex-1 flex items-center justify-center py-3 bg-[#fcfaff] text-[#1a1a1a] rounded-xl font-bold hover:opacity-90 transition-opacity">
-                                <IconBrandGithub className="w-5 h-5" />
-                            </a>
-                            <a href="https://linkedin.com/in/saurabh-pawar04" className="flex-1 flex items-center justify-center py-3 bg-[#1a1a1a] text-[#fcfaff] border border-[#333] rounded-xl font-bold hover:bg-[#222] transition-colors">
-                                <IconBrandLinkedin className="w-5 h-5" />
-                            </a>
-                            <a href="mailto:saurabhsp0402@gmail.com" className="flex-1 flex items-center justify-center py-3 bg-[#1a1a1a] text-[#fcfaff] border border-[#333] rounded-xl font-bold hover:bg-[#222] transition-colors">
-                                <IconMail className="w-5 h-5" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    return (
+        <section
+            id="hero"
+            ref={containerRef}
+            className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-12"
+        >
+            {/* 1. Dynamic Background Grid (The "Ecosystem") */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-[#ea5c2a] opacity-20 blur-[100px]" />
+                {/* Scanline effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/80" />
             </div>
-        </div>
-    </section>
-);
 
+            <motion.div
+                style={{ y, opacity }}
+                className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center flex flex-col items-center"
+            >
+                {/* 2. Status Indicator - "System Operational" */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ea5c2a]/5 border border-[#ea5c2a]/20 backdrop-blur-md mb-8"
+                >
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ea5c2a] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ea5c2a]"></span>
+                    </span>
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#ea5c2a]">
+                        System Status: Scalable
+                    </span>
+                </motion.div>
+
+                {/* 3. Main Headlines - Name & Title */}
+                <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    className="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-black tracking-tighter text-[#fcfaff] leading-[0.85] mb-6"
+                >
+                    SAURABH <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ea5c2a] via-[#ff8f6b] to-[#ea5c2a] bg-[length:200%_auto] animate-gradient">
+                        S. PAWAR
+                    </span>
+                </motion.h1>
+
+                {/* 4. Subheadline - The Narrative */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.8 }}
+                    className="flex flex-col items-center gap-4 mb-10"
+                >
+                    <h2 className="text-xl md:text-3xl font-bold text-[#fcfaff]">
+                        Architecting <span className="text-[#ea5c2a]">AI-Driven</span> Digital Ecosystems.
+                    </h2>
+                    <p className="max-w-2xl text-base md:text-lg text-[#fcfaff]/60 font-light leading-relaxed">
+                        Bridging <strong className="text-[#fcfaff] font-medium">Enterprise Engineering</strong> &amp; <strong className="text-[#fcfaff] font-medium">Strategic Growth</strong>.
+                        We build market dominance through autonomous cloud infrastructures.
+                    </p>
+                </motion.div>
+
+                {/* 5. Command Center / CTAs */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.8 }}
+                    className="flex flex-col sm:flex-row items-center gap-6"
+                >
+                    <a
+                        href="#projects"
+                        className="group relative px-8 py-4 bg-[#fcfaff] text-black rounded-full font-black uppercase tracking-widest text-xs hover:bg-[#ea5c2a] hover:text-white transition-all duration-300 flex items-center gap-2 overflow-hidden"
+                    >
+                        <span className="relative z-10">Explore Systems</span>
+                        <IconTerminal2 className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                    </a>
+
+                    <div className="flex items-center gap-4">
+                        <SocialLink href="https://github.com/P0Saurabh" icon={<IconBrandGithub className="w-5 h-5" />} label="GitHub" />
+                        <SocialLink href="https://linkedin.com/in/saurabh-pawar04" icon={<IconBrandLinkedin className="w-5 h-5" />} label="LinkedIn" />
+                        <SocialLink href="mailto:saurabhsp0402@gmail.com" icon={<IconMail className="w-5 h-5" />} label="Email" />
+                    </div>
+                </motion.div>
+            </motion.div>
+
+            {/* 6. Bottom Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 1 }}
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#fcfaff]/20"
+            >
+                {/* Removed Initialize Text */}
+                <IconChevronDown className="w-5 h-5 animate-bounce" />
+            </motion.div>
+        </section>
+    );
+};
+
+const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-12 h-12 rounded-full border border-[#fcfaff]/10 bg-[#fcfaff]/5 flex items-center justify-center text-[#fcfaff]/60 hover:text-[#ea5c2a] hover:border-[#ea5c2a]/40 hover:scale-110 transition-all duration-300 group relative"
+        aria-label={label}
+    >
+        {icon}
+        <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#1a1a1a] border border-[#333] rounded text-[10px] text-[#fcfaff] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            {label}
+        </span>
+    </a>
+);
