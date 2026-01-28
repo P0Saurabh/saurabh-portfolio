@@ -2,8 +2,6 @@ import React from "react";
 import {
   IconBrandPython,
   IconBrandJavascript,
-  IconBrandReact,
-  IconBrandNodejs,
   IconBrandAws,
   IconBrandDocker,
   IconBrandGit,

@@ -2,11 +2,7 @@ import React from "react";
 import { PROJECTS } from "../../data/projects";
 import type { Project } from "../../data/projects";
 import { ProjectCard } from "../shared/ProjectCard";
-import {
-  IconCode,
-  IconClick,
-  IconRocket
-} from "@tabler/icons-react";
+import { IconClick } from "@tabler/icons-react";
 
 type Props = {
   onProjectClick: (project: Project) => void;

@@ -2,11 +2,7 @@ import React from "react";
 import { TimelineItem } from "../shared/TimelineItem";
 import {
   IconAward,
-  IconFileText,
-  IconCertificate,
-  IconExternalLink,
-  IconBriefcase,
-  IconUsers
+  IconExternalLink
 } from "@tabler/icons-react";
 
 
@@ -147,7 +143,7 @@ export const ExperienceSection: React.FC = () => (
             </p>
 
             <div className="space-y-3">
-              <a href="https://doi.org/10.36948/ijfmr.2024.v06i05.26970" target="_blank" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
+              <a href="https://doi.org/10.36948/ijfmr.2024.v06i05.26970" target="_blank" rel="noopener noreferrer" aria-label="Read IJFMR Publication on AI Systems" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
                 <div className="w-8 h-8 rounded-lg bg-[#000] flex items-center justify-center text-[#fcfaff]/50 font-serif font-bold text-xs border border-[#ffffff]/10">1</div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-[#fcfaff] group-hover/paper:text-[#ea5c2a] transition-colors">IJFMR Publication</div>
@@ -155,7 +151,7 @@ export const ExperienceSection: React.FC = () => (
                 </div>
                 <IconExternalLink className="w-4 h-4 text-[#fcfaff]/20 group-hover/paper:text-[#ea5c2a]" />
               </a>
-              <a href="https://doi.org/10.56025/IJARESM.2025.130225474" target="_blank" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
+              <a href="https://doi.org/10.56025/IJARESM.2025.130225474" target="_blank" rel="noopener noreferrer" aria-label="Read IJARESM Publication" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
                 <div className="w-8 h-8 rounded-lg bg-[#000] flex items-center justify-center text-[#fcfaff]/50 font-serif font-bold text-xs border border-[#ffffff]/10">2</div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-[#fcfaff] group-hover/paper:text-[#ea5c2a] transition-colors">IJARESM Publication</div>

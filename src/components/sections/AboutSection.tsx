@@ -1,5 +1,5 @@
 import React from "react";
-import { IconCpu, IconBook, IconSchool, IconCode } from "@tabler/icons-react";
+import { IconCpu, IconSchool, IconCode } from "@tabler/icons-react";
 
 export const AboutSection: React.FC = () => (
   <section id="about" className="mt-20 lg:mt-32 max-w-5xl mx-auto px-4">
