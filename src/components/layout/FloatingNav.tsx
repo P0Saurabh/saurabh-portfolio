@@ -78,7 +78,7 @@ export const FloatingNav: React.FC = () => {
                   className="flex flex-col items-center justify-center px-2 py-1 text-[10px] text-[#fcfaff]/70 hover:text-[#fcfaff]"
                 >
                   <span className="mb-[2px] flex items-center justify-center rounded-full p-1.5 bg-[#1e1e1e] border border-[#2a2a2a]">
-                    {React.cloneElement(item.icon as React.ReactElement<any>, {
+                    {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, {
                       className: "w-4 h-4 text-[#ea5c2a]",
                     })}
                   </span>

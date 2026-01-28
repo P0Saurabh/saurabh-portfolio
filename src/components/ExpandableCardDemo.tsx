@@ -2,7 +2,8 @@
 
 // Uses the necessary hooks. Explicit 'React' import is no longer needed 
 // if tsconfig.json is configured for the automatic JSX runtime ("jsx": "react-jsx").
-import { useEffect, useId, useRef, useState } from "react"; 
+import { useEffect, useId, useRef, useState } from "react";
+import Image from "next/image";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -14,7 +15,7 @@ interface Card {
     ctaText: string;
     ctaLink: string;
     // Uses React.JSX.Element for type safety without needing explicit import React
-    content: () => React.JSX.Element; 
+    content: () => React.JSX.Element;
 }
 
 // --- Card Data (DevOps Portfolio Example) ---
@@ -22,9 +23,9 @@ const cards: Card[] = [
     {
         description: "CloudFormation, AWS",
         title: "EKS Cluster Deployment (Terraform)",
-        src: "https://assets.aceternity.com/demos/metallica.jpeg", 
+        src: "https://assets.aceternity.com/demos/metallica.jpeg",
         ctaText: "View Code",
-        ctaLink: "#", 
+        ctaLink: "#",
         content: () => (
             <>
                 <p>
@@ -42,9 +43,9 @@ const cards: Card[] = [
     {
         description: "Azure DevOps, YAML Pipelines",
         title: "CI/CD Pipeline for Microservice",
-        src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg", 
+        src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
         ctaText: "View Demo",
-        ctaLink: "#", 
+        ctaLink: "#",
         content: () => (
             <>
                 <p>
@@ -62,7 +63,7 @@ const cards: Card[] = [
     {
         description: "Ansible, Jenkins, Prometheus",
         title: "Configuration Management & Monitoring",
-        src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg", 
+        src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
         ctaText: "View Setup",
         ctaLink: "#",
         content: () => (
@@ -107,23 +108,23 @@ export const CloseIcon = () => {
 // --- Main Component ---
 export function ExpandableCardDemo() {
     const [active, setActive] = useState<Card | null>(null);
-    const ref = useRef<HTMLDivElement>(null); 
+    const ref = useRef<HTMLDivElement>(null);
     const id = useId();
 
     // Effect to handle body scrolling and Escape key closure
     useEffect(() => {
-      function onKeyDown(event: KeyboardEvent) {
-        if (event.key === "Escape") {
-          setActive(null);
+        function onKeyDown(event: KeyboardEvent) {
+            if (event.key === "Escape") {
+                setActive(null);
+            }
         }
-      }
-      if (active) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-      window.addEventListener("keydown", onKeyDown);
-      return () => window.removeEventListener("keydown", onKeyDown);
+        if (active) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
     }, [active]);
 
     // Outside click detection (using the fixed hook)
@@ -142,7 +143,7 @@ export function ExpandableCardDemo() {
                     />
                 )}
             </AnimatePresence>
-            
+
             {/* Expanded Card Modal */}
             <AnimatePresence>
                 {active ? (
@@ -158,7 +159,7 @@ export function ExpandableCardDemo() {
                         >
                             <CloseIcon />
                         </motion.button>
-                        
+
                         {/* ADJUSTED: Card Container Size - wider and taller */}
                         <motion.div
                             layoutId={`card-${active.title}-${id}`}
@@ -167,8 +168,8 @@ export function ExpandableCardDemo() {
                             className="w-full max-w-4xl h-full md:h-fit md:max-h-[95%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
                         >
                             <motion.div layoutId={`image-${active.title}-${id}`}>
-                                <img
-                                    width={500} 
+                                <Image
+                                    width={500}
                                     height={320}
                                     src={active.src}
                                     alt={active.title}
@@ -230,8 +231,8 @@ export function ExpandableCardDemo() {
                     >
                         <div className="flex gap-4 flex-col md:flex-row ">
                             <motion.div layoutId={`image-${card.title}-${id}`}>
-                                <img
-                                    width={100} 
+                                <Image
+                                    width={100}
                                     height={100}
                                     src={card.src}
                                     alt={card.title}
