@@ -13,19 +13,19 @@ export const AboutSection: React.FC = () => (
         </span>
 
         <h2 className="text-3xl md:text-5xl font-black text-[#fcfaff] mb-8 leading-tight">
-          Reliability Engineer & <br />
-          <span className="text-[#fcfaff]/20">Full-Stack Builder.</span>
+          Architecting <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ea5c2a] to-[#ff8f6b]">AI-Driven Ecosystems.</span>
         </h2>
 
         <div className="space-y-6 text-[#fcfaff]/70 text-base md:text-lg leading-relaxed font-light">
           <p>
-            I am a <strong className="text-[#fcfaff] font-bold">Software & DevOps Engineer</strong> driven by the challenge of making systems faster, safer, and more autonomous.
+            I don't just build software; I build <strong className="text-[#fcfaff] font-bold">market dominance</strong>. Operating at the intersection of High-Performance DevOps and Commercial Strategy, I bridge the gap between Enterprise-Grade Engineering and Strategic Growth.
           </p>
           <p>
-            With a deep foundation in <span className="text-[#ea5c2a]">Cloud Computing</span> and <span className="text-[#ea5c2a]">Python/JS ecosystems</span>, I bridge the gap between complex application logic and the infrastructure that powers it.
+            Leveraging my background as a <span className="text-[#ea5c2a]">Google Professional Cloud DevOps Engineer</span>, I deploy resilient microservices, custom AI logic, and scalable web architectures that ensure your tech is an asset, not a liability.
           </p>
           <p>
-            My philosophy is simple: <em className="text-[#fcfaff] not-italic font-medium">"If it's repetitive, automate it. If it's complex, simplify it."</em>
+            My Methodology: <em className="text-[#fcfaff] not-italic font-medium">"Robust, self-healing infrastructures. Code that talks to market strategy."</em>
           </p>
         </div>
 

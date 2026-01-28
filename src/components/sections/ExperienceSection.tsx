@@ -39,25 +39,33 @@ export const ExperienceSection: React.FC = () => (
               role="Freelancer – Full-Stack Consultant"
               time="Ongoing"
               bullets={[
-                "Architecting scalable digital solutions for diverse client needs.",
-                "Optimizing application performance causing 40% reduction in load times.",
-                "Bridging the gap between complex backend logic and intuitive UI/UX.",
+                "Architecting scalable digital solutions (MERN/Next.js) aligned with client revenue goals.",
+                "Implementing AI Process Automation (n8n) to reduce operational overhead.",
+                "Delivering technical SEO strategies alongside robust backend architecture.",
               ]}
             />
             <TimelineItem
-              role="Microsoft Student Ambassador"
-              time="Apr 2024 – Sep 2025"
-              bullets={[
-                "Led technical workshops on Azure Cloud & DevOps methodologies.",
-                "Mentored 200+ students in open-source contribution and cloud fundamentals.",
-              ]}
-            />
-            <TimelineItem
-              role="Vice Organiser – GDG on Campus"
+              role="Vice Organizer – GDG on Campus"
               time="Sep 2024 – Sep 2025"
               bullets={[
                 "Orchestrated large-scale hackathons focused on Docker & Kubernetes.",
                 "Managed community growth and technical content delivery strategy.",
+              ]}
+            />
+            <TimelineItem
+              role="Project Head – GDG on Campus"
+              time="Aug 2023 – Aug 2024"
+              bullets={[
+                "Led technical projects and workshops enabling student developers.",
+                "Fostered an environment of open-source contribution and peer learning.",
+              ]}
+            />
+            <TimelineItem
+              role="Microsoft Student Ambassador"
+              time="Apr 2024 – Present"
+              bullets={[
+                "Leading technical workshops on Azure Cloud & DevOps methodologies.",
+                "Reached Beta milestone: Organizing larger events and mentoring new ambassadors.",
               ]}
             />
           </div>

@@ -14,17 +14,37 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://saurabhpawar.com"),
-  title: "Saurabh Satish Pawar | DevOps & Software Engineer",
-  description: "Portfolio of Saurabh Satish Pawar - Full Stack Developer, DevOps Engineer, and AI Automation expert. Specialized in cloud-native infrastructure, CI/CD, and scalable applications.",
-  keywords: ["DevOps", "Software Engineer", "React", "GSAP", "Cloud Native", "Kubernetes", "AWS", "Full Stack"],
+  title: "Saurabh Pawar | Cloud DevOps Architect & Full-Stack Engineer",
+  description: "Architecting AI-Driven Digital Ecosystems. Portfolio of Google Cloud Professional DevOps Engineer & Red Hat System Administrator specializing in Scalable Automated Infrastructures and High-Performance Web Architectures.",
+  keywords: [
+    "Saurabh portfolio",
+    "Cloud DevOps",
+    "GCP Professional",
+    "Red Hat Certified",
+    "RHCSA",
+    "AI Automation",
+    "System Design",
+    "Full Stack Engineer",
+    "React",
+    "Next.js",
+    "Kubernetes",
+    "AWS",
+    "Market Dominance",
+    "Pune",
+    "India"
+  ],
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Saurabh Satish Pawar | DevOps & Software Engineer",
-    description: "Portfolio of Saurabh Satish Pawar - Full Stack Developer",
+    title: "Saurabh Pawar | Cloud DevOps Architect & Full-Stack Engineer",
+    description: "Bridging the gap between Enterprise-Grade Engineering and Strategic Growth. Architecting AI-driven digital ecosystems.",
     images: ["/logo.png"],
+    url: "https://saurabhpawar.com",
+    siteName: "Saurabh Pawar Portfolio",
+    locale: "en_US",
+    type: "website",
   },
 };
 
