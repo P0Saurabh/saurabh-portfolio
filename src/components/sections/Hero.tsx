@@ -75,11 +75,11 @@ export const Hero: React.FC = () => {
                     className="flex flex-col items-center gap-4 mb-10"
                 >
                     <h2 className="text-xl md:text-3xl font-bold text-[#fcfaff]">
-                        Architecting <span className="text-[#ea5c2a]">AI-Driven</span> Digital Ecosystems.
+                        Building <span className="text-[#ea5c2a]">Smart</span> &amp; <span className="text-[#ea5c2a]">Scalable</span> Systems.
                     </h2>
                     <p className="max-w-2xl text-base md:text-lg text-[#fcfaff]/60 font-light leading-relaxed">
-                        Bridging <strong className="text-[#fcfaff] font-medium">Enterprise Engineering</strong> &amp; <strong className="text-[#fcfaff] font-medium">Strategic Growth</strong>.
-                        We build market dominance through autonomous cloud infrastructures.
+                        Bridging the gap between <strong className="text-[#fcfaff] font-medium">Concept</strong> and <strong className="text-[#fcfaff] font-medium">Deployment</strong>.
+                        I design autonomous cloud infrastructures and high-performance applications.
                     </p>
                 </motion.div>
 

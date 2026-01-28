@@ -12,20 +12,15 @@ export const AboutSection: React.FC = () => (
           01 // The Profile
         </span>
 
-        <h2 className="text-3xl md:text-5xl font-black text-[#fcfaff] mb-8 leading-tight">
-          Architecting <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ea5c2a] to-[#ff8f6b]">AI-Driven Ecosystems.</span>
-        </h2>
-
         <div className="space-y-6 text-[#fcfaff]/70 text-base md:text-lg leading-relaxed font-light">
           <p>
-            I don't just build software; I build <strong className="text-[#fcfaff] font-bold">market dominance</strong>. Operating at the intersection of High-Performance DevOps and Commercial Strategy, I bridge the gap between Enterprise-Grade Engineering and Strategic Growth.
+            I am a <strong className="text-[#fcfaff] font-bold">Software & DevOps Engineer</strong> obsessed with how things work under the hood. I don't just write code; I build systems that are scalable, secure, and self-healing.
           </p>
           <p>
-            Leveraging my background as a <span className="text-[#ea5c2a]">Google Professional Cloud DevOps Engineer</span>, I deploy resilient microservices, custom AI logic, and scalable web architectures that ensure your tech is an asset, not a liability.
+            With certifications as a <span className="text-[#ea5c2a]">Google Cloud Professional</span> and <span className="text-[#ea5c2a]">Red Hat Administrator</span>, I bridge the gap between development logic and the infrastructure that powers it.
           </p>
           <p>
-            My Methodology: <em className="text-[#fcfaff] not-italic font-medium">"Robust, self-healing infrastructures. Code that talks to market strategy."</em>
+            My approach: <em className="text-[#fcfaff] not-italic font-medium">"Simplify complexity, automate the mundane, and build for the future."</em>
           </p>
         </div>
 
@@ -39,11 +34,6 @@ export const AboutSection: React.FC = () => (
           <div>
             <span className="block text-3xl md:text-4xl font-black text-[#fcfaff]">2</span>
             <span className="text-xs uppercase tracking-widest text-[#fcfaff]/40 mt-1 block">Papers</span>
-          </div>
-          <div className="bg-[#ea5c2a] w-px h-12 opacity-20" />
-          <div>
-            <span className="block text-3xl md:text-4xl font-black text-[#fcfaff]">4+</span>
-            <span className="text-xs uppercase tracking-widest text-[#fcfaff]/40 mt-1 block">Yrs Coding</span>
           </div>
         </div>
       </div>
