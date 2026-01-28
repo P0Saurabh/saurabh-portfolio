@@ -1,15 +1,17 @@
-// src/components/sections/SkillsSection.tsx
 import React from "react";
 import { SkillGroup } from "../shared/SkillGroup";
+import { IconDatabase } from "@tabler/icons-react";
 
 export const SkillsSection: React.FC = () => (
   <section
     id="skills"
-    className="panel mt-8 bg-[#1e1e1e]/95 border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl shadow-black/70"
+    className="panel mt-8 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-3xl p-6 md:p-12 shadow-2xl shadow-black/80"
   >
-    <div className="flex items-center justify-between mb-4">
-      <h2 className="text-lg md:text-xl font-semibold">Skill Stack</h2>
-      <span className="text-xs text-[#fcfaff]/60">From idea → code → cloud.</span>
+    <div className="mb-10">
+      <h2 className="text-sm md:text-base font-black uppercase tracking-[0.4em] text-[#fcfaff] relative inline-block">
+        Skill Stack
+        <span className="absolute -bottom-2 left-0 w-8 h-[3px] bg-[#ea5c2a] rounded-full" />
+      </h2>
     </div>
     <div className="grid md:grid-cols-2 gap-6 text-sm">
       <SkillGroup title="Languages" items={["Python", "JavaScript", "Bash"]} />
