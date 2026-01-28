@@ -69,7 +69,7 @@ export const SkillsSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-[#fcfaff] mb-2">Modern Stack</h3>
             <div className="flex flex-wrap gap-2 mt-6">
-              {["React", "Next.js", "Node.js", "Express", "FastAPI", "TailwindCSS", "Framer Motion"].map((tag, i) => (
+              {["React", "Next.js", "Node.js", "Express", "FastAPI", "TailwindCSS", "Framer Motion"].map((tag) => (
                 <span key={tag} className="px-3 py-1.5 rounded-lg bg-[#ffffff]/5 border border-[#ffffff]/5 text-xs text-[#fcfaff]/70 hover:bg-[#ea5c2a] hover:text-white hover:border-[#ea5c2a] transition-all cursor-default">
                   {tag}
                 </span>
@@ -106,7 +106,7 @@ export const SkillsSection: React.FC = () => {
                 { name: "Terraform", icon: <IconDatabase className="w-5 h-5" /> },
                 { name: "CI/CD", icon: <IconCpu className="w-5 h-5" /> },
                 { name: "Linux", icon: <IconTerminal className="w-5 h-5" /> },
-              ].map((item, i) => (
+              ].map((item) => (
                 <div key={item.name} className="flex flex-col items-center justify-center p-4 rounded-xl bg-[#ffffff]/5 hover:bg-[#ffffff]/10 hover:scale-105 transition-all duration-300 border border-[#ffffff]/5 hover:border-[#ea5c2a]/30 group/box">
                   <span className="mb-3 text-[#fcfaff]/50 group-hover/box:text-[#ea5c2a] transition-colors">
                     {item.icon}
