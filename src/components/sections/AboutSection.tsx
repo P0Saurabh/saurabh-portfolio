@@ -1,14 +1,18 @@
-// src/components/sections/AboutSection.tsx
-import React from "react";
+import { IconUser } from "@tabler/icons-react";
 
 export const AboutSection: React.FC = () => (
   <section
     id="about"
-    className="panel mt-10 bg-[#1e1e1e]/95 border border-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-xl shadow-black/70"
+    className="panel mt-10 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-3xl p-6 md:p-12 shadow-2xl shadow-black/80"
   >
-    <div className="flex flex-col md:flex-row gap-8 items-start">
+    <div className="flex flex-col md:flex-row gap-12 items-center">
       <div className="flex-1">
-        <h2 className="text-lg md:text-xl font-semibold mb-3">About</h2>
+        <div className="mb-10">
+          <h2 className="text-sm md:text-base font-black uppercase tracking-[0.4em] text-[#fcfaff] relative inline-block">
+            About Me
+            <span className="absolute -bottom-2 left-0 w-8 h-[3px] bg-[#ea5c2a] rounded-full" />
+          </h2>
+        </div>
         <p className="text-sm md:text-base text-[#fcfaff]/80 leading-relaxed">
           Motivated Software and DevOps Engineer with strong foundations in Python,
           JavaScript, and Cloud Computing. Experienced in building scalable
