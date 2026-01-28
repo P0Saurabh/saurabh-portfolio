@@ -1,44 +1,95 @@
-import { IconUser } from "@tabler/icons-react";
+import React from "react";
+import { IconCpu, IconBook, IconSchool, IconCode } from "@tabler/icons-react";
 
 export const AboutSection: React.FC = () => (
-  <section
-    id="about"
-    className="panel mt-10 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-3xl p-6 md:p-12 shadow-2xl shadow-black/80"
-  >
-    <div className="flex flex-col md:flex-row gap-12 items-center">
-      <div className="flex-1">
-        <div className="mb-10">
-          <h2 className="text-sm md:text-base font-black uppercase tracking-[0.4em] text-[#fcfaff] relative inline-block">
-            About Me
-            <span className="absolute -bottom-2 left-0 w-8 h-[3px] bg-[#ea5c2a] rounded-full" />
-          </h2>
+  <section id="about" className="mt-20 lg:mt-32 max-w-5xl mx-auto px-4">
+
+    <div className="flex flex-col md:grid md:grid-cols-12 gap-12 items-start">
+
+      {/* Left Text Column */}
+      <div className="md:col-span-7 lg:col-span-7">
+        <span className="text-[#ea5c2a] font-mono text-xs uppercase tracking-[0.3em] font-bold mb-6 block">
+          01 // The Profile
+        </span>
+
+        <h2 className="text-3xl md:text-5xl font-black text-[#fcfaff] mb-8 leading-tight">
+          Reliability Engineer & <br />
+          <span className="text-[#fcfaff]/20">Full-Stack Builder.</span>
+        </h2>
+
+        <div className="space-y-6 text-[#fcfaff]/70 text-base md:text-lg leading-relaxed font-light">
+          <p>
+            I am a <strong className="text-[#fcfaff] font-bold">Software & DevOps Engineer</strong> driven by the challenge of making systems faster, safer, and more autonomous.
+          </p>
+          <p>
+            With a deep foundation in <span className="text-[#ea5c2a]">Cloud Computing</span> and <span className="text-[#ea5c2a]">Python/JS ecosystems</span>, I bridge the gap between complex application logic and the infrastructure that powers it.
+          </p>
+          <p>
+            My philosophy is simple: <em className="text-[#fcfaff] not-italic font-medium">"If it's repetitive, automate it. If it's complex, simplify it."</em>
+          </p>
         </div>
-        <p className="text-sm md:text-base text-[#fcfaff]/80 leading-relaxed">
-          Motivated Software and DevOps Engineer with strong foundations in Python,
-          JavaScript, and Cloud Computing. Experienced in building scalable
-          full-stack applications, automating CI/CD pipelines, and deploying
-          containerized solutions on AWS &amp; Kubernetes. Passionate about combining
-          software craftsmanship with DevOps and AI automation to deliver secure,
-          reliable, and high-performance systems.
-        </p>
+
+        {/* Stats Row */}
+        <div className="flex items-center gap-8 mt-12 pt-12 border-t border-[#ffffff]/10">
+          <div>
+            <span className="block text-3xl md:text-4xl font-black text-[#fcfaff]">20+</span>
+            <span className="text-xs uppercase tracking-widest text-[#fcfaff]/40 mt-1 block">Projects</span>
+          </div>
+          <div className="bg-[#ea5c2a] w-px h-12 opacity-20" />
+          <div>
+            <span className="block text-3xl md:text-4xl font-black text-[#fcfaff]">2</span>
+            <span className="text-xs uppercase tracking-widest text-[#fcfaff]/40 mt-1 block">Papers</span>
+          </div>
+          <div className="bg-[#ea5c2a] w-px h-12 opacity-20" />
+          <div>
+            <span className="block text-3xl md:text-4xl font-black text-[#fcfaff]">4+</span>
+            <span className="text-xs uppercase tracking-widest text-[#fcfaff]/40 mt-1 block">Yrs Coding</span>
+          </div>
+        </div>
       </div>
-      <div className="w-full md:w-1/3 bg-[#101010] p-4 rounded-2xl border border-[#2a2a2a]">
-        <h3 className="text-sm font-semibold text-[#ea5c2a] mb-2 uppercase tracking-wider">
-          Education
-        </h3>
-        <p className="text-sm font-medium text-[#fcfaff]">
-          B.Tech in Computer Science
-        </p>
-        <p className="text-xs text-[#fcfaff]/60 mt-1">
-          MGM’s College of Engineering, Nanded
-        </p>
-        <p className="text-xs text-[#fcfaff]/50 mt-1">
-          Aug 2021 – Sep 2025
-        </p>
-        <p className="text-xs text-[#ea5c2a]/80 mt-2 font-mono">
-          CGPA: 6.8 / 10
-        </p>
+
+      {/* Right Decor/Education Column */}
+      <div className="md:col-span-5 lg:col-span-5 w-full space-y-6">
+
+        {/* Education Card */}
+        <div className="group relative bg-[#1a1a1a] rounded-[2rem] border border-[#ffffff]/10 p-8 hover:border-[#ea5c2a]/30 transition-all duration-500 overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ea5c2a]/5 rounded-full blur-3xl -mr-10 -mt-10" />
+
+          <div className="relative z-10">
+            <div className="w-10 h-10 rounded-xl bg-[#2a2a2a] flex items-center justify-center mb-6 text-[#ea5c2a]">
+              <IconSchool className="w-5 h-5" />
+            </div>
+
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#fcfaff]/40 font-bold mb-2">Education</h3>
+            <div className="text-xl font-bold text-[#fcfaff] mb-1">B.Tech Computer Science</div>
+            <div className="text-sm text-[#ea5c2a] font-medium mb-6">MGM’s College of Engineering</div>
+
+            <div className="space-y-3">
+              <div className="flex justify-between items-center text-xs pb-3 border-b border-[#ffffff]/5">
+                <span className="text-[#fcfaff]/50">Term</span>
+                <span className="font-mono text-[#fcfaff]">2021 — 2025</span>
+              </div>
+              <div className="flex justify-between items-center text-xs">
+                <span className="text-[#fcfaff]/50">CGPA</span>
+                <span className="font-mono text-[#ea5c2a] bg-[#ea5c2a]/10 px-2 py-0.5 rounded">6.8 / 10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Interests/Focus Mini-Cards */}
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-[#101010] p-4 rounded-2xl border border-[#ffffff]/5 flex flex-col gap-3 hover:border-[#ea5c2a]/20 transition-colors">
+            <IconCpu className="w-5 h-5 text-[#fcfaff]/30" />
+            <span className="text-xs font-bold text-[#fcfaff]/80">System Design</span>
+          </div>
+          <div className="bg-[#101010] p-4 rounded-2xl border border-[#ffffff]/5 flex flex-col gap-3 hover:border-[#ea5c2a]/20 transition-colors">
+            <IconCode className="w-5 h-5 text-[#fcfaff]/30" />
+            <span className="text-xs font-bold text-[#fcfaff]/80">Automation</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 );

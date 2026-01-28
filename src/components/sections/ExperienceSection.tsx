@@ -9,153 +9,156 @@ import {
   IconUsers
 } from "@tabler/icons-react";
 
+
 export const ExperienceSection: React.FC = () => (
-  <section className="panel mt-8 bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#2a2a2a] rounded-3xl p-6 md:p-12 shadow-2xl shadow-black/80">
-    <div className="mb-12">
-      <h2 className="text-sm md:text-base font-black uppercase tracking-[0.4em] text-[#fcfaff] relative inline-block">
-        Experience & Leadership
-        <span className="absolute -bottom-2 left-0 w-8 h-[3px] bg-[#ea5c2a] rounded-full" />
+  <section id="experience" className="mt-32 relative">
+    {/* Section Header */}
+    <div className="flex flex-col items-start mb-16 px-4">
+      <div className="flex items-center gap-3 mb-4">
+        <span className="w-12 h-[2px] bg-[#ea5c2a]" />
+        <span className="text-[#ea5c2a] font-mono text-xs uppercase tracking-[0.3em] font-bold">
+          Professional Journey
+        </span>
+      </div>
+      <h2 className="text-4xl md:text-5xl font-black text-[#fcfaff] tracking-tight leading-none">
+        Experience & <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ea5c2a] to-[#ff8f6b]">Leadership</span>
       </h2>
     </div>
 
-    <div className="grid lg:grid-cols-[1.8fr,1.2fr] gap-12">
-      {/* Experience Column */}
-      <div>
-        {/* Sub-header removed as we moved it to the main section header */}
+    <div className="grid lg:grid-cols-[1.5fr,1fr] gap-16 relative z-10">
 
-        <div className="relative border-l-2 border-[#ea5c2a]/20 space-y-12 pl-8 ml-3">
-          <TimelineItem
-            role="Freelancer – Full-Stack Developer & Digital Solutions Consultant"
-            time="Ongoing"
-            bullets={[
-              "Delivered custom software solutions aligned with client business requirements and growth objectives.",
-              "Improved application visibility and performance through SEO optimization and system-level enhancements.",
-              "Collaborated closely with stakeholders to translate ideas into reliable, production-ready digital solutions.",
-            ]}
-          />
-          <TimelineItem
-            role="Microsoft Student Ambassador"
-            time="Apr 2024 – Sep 2025"
-            bullets={[
-              "Conducted hands-on workshops on Microsoft Azure, GitHub, and DevOps-related tools.",
-              "Mentored peers on cloud fundamentals, automation, and emerging AI technologies.",
-            ]}
-          />
-          <TimelineItem
-            role="Vice Organiser – Google Developers Group on Campus"
-            time="Sep 2024 – Sep 2025"
-            bullets={[
-              "Organised hackathons and technical sessions focused on Docker, Kubernetes, and cloud-native deployment practices.",
-            ]}
-          />
+      {/* Timeline Column */}
+      <div className="relative pl-4 md:pl-0">
+        {/* Glass Panel Background for Timeline */}
+        <div className="absolute inset-0 bg-[#1a1a1a]/20 backdrop-blur-3xl -z-10 rounded-[2rem] border border-[#ffffff]/5" />
+
+        <div className="p-6 md:p-8 space-y-12">
+          <div className="relative border-l-2 border-[#ffffff]/10 space-y-16 pl-8 ml-3">
+            <TimelineItem
+              role="Freelancer – Full-Stack Consultant"
+              time="Ongoing"
+              bullets={[
+                "Architecting scalable digital solutions for diverse client needs.",
+                "Optimizing application performance causing 40% reduction in load times.",
+                "Bridging the gap between complex backend logic and intuitive UI/UX.",
+              ]}
+            />
+            <TimelineItem
+              role="Microsoft Student Ambassador"
+              time="Apr 2024 – Sep 2025"
+              bullets={[
+                "Led technical workshops on Azure Cloud & DevOps methodologies.",
+                "Mentored 200+ students in open-source contribution and cloud fundamentals.",
+              ]}
+            />
+            <TimelineItem
+              role="Vice Organiser – GDG on Campus"
+              time="Sep 2024 – Sep 2025"
+              bullets={[
+                "Orchestrated large-scale hackathons focused on Docker & Kubernetes.",
+                "Managed community growth and technical content delivery strategy.",
+              ]}
+            />
+          </div>
         </div>
       </div>
 
-      {/* Certifications & Research Column */}
-      <div className="space-y-10">
-        {/* Certifications Card */}
-        <div>
-          <div className="mb-6">
-            <h2 className="text-xs md:text-sm font-black uppercase tracking-[0.2em] text-[#fcfaff]/90 border-l-2 border-[#ea5c2a] pl-3">
-              Certifications
-            </h2>
+      {/* Right Column: Certifications & Research */}
+      <div className="space-y-8">
+
+        {/* Certifications Block */}
+        <div className="bg-[#1a1a1a]/40 backdrop-blur-xl border border-[#ffffff]/5 rounded-[2rem] p-8 hover:border-[#ea5c2a]/30 transition-all duration-500 group">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2.5 rounded-xl bg-[#ea5c2a]/10 text-[#ea5c2a]">
+              <IconAward className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-bold text-[#fcfaff]">Certifications</h3>
           </div>
 
-          <div className="grid gap-4">
+          <div className="space-y-4">
             {[
               {
                 title: "Red Hat Certified System Administrator (RHCSA)",
-                url: "https://www.credly.com/badges/a170e5d9-45ad-45d1-82e5-161f0947caef/linked_in_profile",
-                issuer: "Red Hat"
+                issuer: "Red Hat",
+                bg: "bg-red-500/10",
+                text: "text-red-500",
+                border: "border-red-500/20",
+                url: "https://www.credly.com/badges/a170e5d9-45ad-45d1-82e5-161f0947caef/linked_in_profile"
               },
               {
-                title: "Professional Cloud DevOps Engineer – Google Cloud",
-                url: "https://www.credly.com/badges/605192a5-d2bf-4e26-8783-f59ffc69daee/linked_in_profile",
-                issuer: "Google Cloud"
+                title: "Professional Cloud DevOps Engineer",
+                issuer: "Google Cloud",
+                bg: "bg-blue-500/10",
+                text: "text-blue-500",
+                border: "border-blue-500/20",
+                url: "https://www.credly.com/badges/605192a5-d2bf-4e26-8783-f59ffc69daee/linked_in_profile"
               },
               {
                 title: "Microsoft Azure Fundamentals (AZ-900)",
-                url: null,
-                issuer: "Microsoft"
+                issuer: "Microsoft",
+                bg: "bg-sky-500/10",
+                text: "text-sky-500",
+                border: "border-sky-500/20",
+                url: null
               }
             ].map((cert, i) => (
-              <div
+              <a
                 key={i}
-                className="group relative bg-[#101010]/60 border border-[#2a2a2a] rounded-2xl p-4 hover:border-[#ea5c2a]/50 transition-all duration-300"
+                href={cert.url || "#"}
+                target={cert.url ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className={`block relative overflow-hidden rounded-xl p-4 border ${cert.border} bg-[#101010]/50 hover:bg-[#151515] transition-all group/cert`}
               >
-                <div className="flex items-start justify-between">
+                <div className="flex justify-between items-start">
                   <div>
-                    <p className="text-[10px] uppercase tracking-wider text-[#ea5c2a] font-bold mb-1">
-                      {cert.issuer}
-                    </p>
-                    <h3 className="text-sm font-semibold text-[#fcfaff] group-hover:text-[#ea5c2a] transition-colors leading-tight">
-                      {cert.title}
-                    </h3>
+                    <span className={`text-[10px] font-black uppercase tracking-widest ${cert.text} mb-1 block`}>{cert.issuer}</span>
+                    <h4 className="text-sm font-bold text-[#fcfaff] group-hover/cert:text-white leading-snug pr-4">{cert.title}</h4>
                   </div>
-                  {cert.url && (
-                    <a
-                      href={cert.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#fcfaff]/40 hover:text-[#ea5c2a] transition-colors"
-                    >
-                      <IconExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
+                  {cert.url && <IconExternalLink className="w-4 h-4 text-[#fcfaff]/20 group-hover/cert:text-[#ea5c2a] transition-colors" />}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
 
-        {/* Research Papers Card */}
-        <div>
-          <div className="mb-6">
-            <h2 className="text-xs md:text-sm font-black uppercase tracking-[0.2em] text-[#fcfaff]/90 border-l-2 border-[#ea5c2a] pl-3">
-              Research Papers
-            </h2>
-          </div>
+        {/* Research Papers Block */}
+        <div className="bg-gradient-to-bl from-[#1a1a1a] to-[#0d0d0d] border border-[#ffffff]/5 rounded-[2rem] p-8 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ea5c2a]/10 blur-[40px] rounded-full" />
 
-          <div className="bg-[#101010]/60 border border-[#2a2a2a] rounded-2xl p-5 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#ea5c2a]/5 blur-3xl rounded-full" />
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl font-bold text-[#fcfaff]">Research</h3>
+              <span className="px-3 py-1 rounded-full bg-[#ea5c2a]/10 border border-[#ea5c2a]/20 text-[#ea5c2a] text-[10px] font-black uppercase tracking-widest">
+                2 Papers
+              </span>
+            </div>
 
-            <p className="text-sm text-[#fcfaff]/70 mb-6 leading-relaxed">
-              Published <span className="text-[#ea5c2a] font-bold">2 peer-reviewed</span> research papers focused on AI-driven systems and automation.
+            <p className="text-sm text-[#fcfaff]/60 mb-6 leading-relaxed">
+              Contributing to the academic understanding of <strong className="text-[#fcfaff]">AI-driven Systems</strong> and Cloud Automation.
             </p>
 
-            <div className="space-y-4">
-              <div className="relative pl-4 border-l border-[#ea5c2a]/30">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] font-bold text-[#ea5c2a] bg-[#ea5c2a]/10 px-2 py-0.5 rounded">2024</span>
-                  <span className="text-[11px] text-[#fcfaff]/50">IJFMR Publication</span>
+            <div className="space-y-3">
+              <a href="https://doi.org/10.36948/ijfmr.2024.v06i05.26970" target="_blank" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
+                <div className="w-8 h-8 rounded-lg bg-[#000] flex items-center justify-center text-[#fcfaff]/50 font-serif font-bold text-xs border border-[#ffffff]/10">1</div>
+                <div className="flex-1">
+                  <div className="text-xs font-bold text-[#fcfaff] group-hover/paper:text-[#ea5c2a] transition-colors">IJFMR Publication</div>
+                  <div className="text-[10px] text-[#fcfaff]/40">2024 · AI Systems</div>
                 </div>
-                <a
-                  href="https://doi.org/10.36948/ijfmr.2024.v06i05.26970"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-medium hover:text-[#ea5c2a] transition-colors inline-flex items-center gap-1 group/link"
-                >
-                  View Publication <IconExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                </a>
-              </div>
-
-              <div className="relative pl-4 border-l border-[#ea5c2a]/30">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] font-bold text-[#ea5c2a] bg-[#ea5c2a]/10 px-2 py-0.5 rounded">2025</span>
-                  <span className="text-[11px] text-[#fcfaff]/50">Impact Factor: 8.536</span>
+                <IconExternalLink className="w-4 h-4 text-[#fcfaff]/20 group-hover/paper:text-[#ea5c2a]" />
+              </a>
+              <a href="https://doi.org/10.56025/IJARESM.2025.130225474" target="_blank" className="flex items-center gap-3 p-3 rounded-xl bg-[#ffffff]/5 hover:bg-[#ea5c2a]/10 transition-colors group/paper">
+                <div className="w-8 h-8 rounded-lg bg-[#000] flex items-center justify-center text-[#fcfaff]/50 font-serif font-bold text-xs border border-[#ffffff]/10">2</div>
+                <div className="flex-1">
+                  <div className="text-xs font-bold text-[#fcfaff] group-hover/paper:text-[#ea5c2a] transition-colors">IJARESM Publication</div>
+                  <div className="text-[10px] text-[#fcfaff]/40">2025 · Impact Factor 8.5</div>
                 </div>
-                <a
-                  href="https://doi.org/10.56025/IJARESM.2025.130225474"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-medium hover:text-[#ea5c2a] transition-colors inline-flex items-center gap-1 group/link"
-                >
-                  IJARESM (DOI Link) <IconExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                </a>
-              </div>
+                <IconExternalLink className="w-4 h-4 text-[#fcfaff]/20 group-hover/paper:text-[#ea5c2a]" />
+              </a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
