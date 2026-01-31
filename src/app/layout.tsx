@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saurabhpawar.com"),
+  metadataBase: new URL("https://devops-porfolio-henna.vercel.app"),
   title: {
     default: "Saurabh Pawar | Cloud DevOps Architect & Full-Stack Engineer",
     template: "%s | Saurabh Pawar"
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "India Tech",
     "Software Engineer Portfolio"
   ],
-  authors: [{ name: "Saurabh Satish Pawar", url: "https://saurabhpawar.com" }],
+  authors: [{ name: "Saurabh Satish Pawar", url: "https://devops-porfolio-henna.vercel.app" }],
   creator: "Saurabh Satish Pawar",
   publisher: "Saurabh Satish Pawar",
   robots: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://saurabhpawar.com",
+    canonical: "https://devops-porfolio-henna.vercel.app",
   },
   icons: {
     icon: [
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         alt: "Saurabh Pawar - DevOps & Full-Stack Engineer Portfolio",
       },
     ],
-    url: "https://saurabhpawar.com",
+    url: "https://devops-porfolio-henna.vercel.app",
     siteName: "Saurabh Pawar Portfolio",
     locale: "en_US",
     type: "website",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     creator: "@saurabhpawar04",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual code when available
+    google: "5F58VJT4czWc-nVFCgw9adUc-tGCkAt9WZMzu158bOU",
   },
   category: "technology",
 };
@@ -108,13 +108,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://saurabhpawar.com/#person",
+      "@id": "https://devops-porfolio-henna.vercel.app/#person",
       "name": "Saurabh Satish Pawar",
       "alternateName": "Saurabh Pawar",
-      "url": "https://saurabhpawar.com",
+      "url": "https://devops-porfolio-henna.vercel.app",
       "image": {
         "@type": "ImageObject",
-        "url": "https://saurabhpawar.com/logo.png",
+        "url": "https://devops-porfolio-henna.vercel.app/logo.png",
         "width": 400,
         "height": 400
       },
@@ -163,20 +163,20 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://saurabhpawar.com/#website",
-      "url": "https://saurabhpawar.com",
+      "@id": "https://devops-porfolio-henna.vercel.app/#website",
+      "url": "https://devops-porfolio-henna.vercel.app",
       "name": "Saurabh Pawar Portfolio",
       "description": "Portfolio of Saurabh Pawar - Cloud DevOps Architect & Full-Stack Engineer",
-      "publisher": { "@id": "https://saurabhpawar.com/#person" },
+      "publisher": { "@id": "https://devops-porfolio-henna.vercel.app/#person" },
       "inLanguage": "en-US"
     },
     {
       "@type": "WebPage",
-      "@id": "https://saurabhpawar.com/#webpage",
-      "url": "https://saurabhpawar.com",
+      "@id": "https://devops-porfolio-henna.vercel.app/#webpage",
+      "url": "https://devops-porfolio-henna.vercel.app",
       "name": "Saurabh Pawar | Cloud DevOps Architect & Full-Stack Engineer",
-      "isPartOf": { "@id": "https://saurabhpawar.com/#website" },
-      "about": { "@id": "https://saurabhpawar.com/#person" },
+      "isPartOf": { "@id": "https://devops-porfolio-henna.vercel.app/#website" },
+      "about": { "@id": "https://devops-porfolio-henna.vercel.app/#person" },
       "description": "Architecting AI-Driven Digital Ecosystems. Portfolio showcasing DevOps, Cloud, and Full-Stack Engineering projects.",
       "inLanguage": "en-US"
     }
@@ -195,7 +195,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <meta name="google-site-verification" content="5F58VJT4czWc-nVFCgw9adUc-tGCkAt9WZMzu158bOU" />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

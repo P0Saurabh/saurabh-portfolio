@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/api/', '/_next/', '/static/'],
             },
         ],
-        sitemap: 'https://saurabhpawar.com/sitemap.xml',
-        host: 'https://saurabhpawar.com',
+        sitemap: 'https://devops-porfolio-henna.vercel.app/sitemap.xml',
+        host: 'https://devops-porfolio-henna.vercel.app',
     };
 }
